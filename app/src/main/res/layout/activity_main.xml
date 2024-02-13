@@ -33,14 +33,38 @@
         app:layout_constraintVertical_bias="1.0"
         app:navGraph="@navigation/mobile_navigation" />
 
+    <EditText
+        android:id="@+id/number_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/textButtonClick_2"
+        app:layout_constraintStart_toStartOf="@+id/textButtonClick_1"
+        app:layout_constraintTop_toTopOf="@+id/nav_host_fragment_activity_main"
+        app:layout_constraintVertical_bias="0.847" />
+
+    <EditText
+        android:id="@+id/number_2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="164dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/spinner"
+        app:layout_constraintStart_toStartOf="@+id/textButtonClick_2"
+        app:layout_constraintTop_toTopOf="@+id/nav_host_fragment_activity_main" />
+
     <Button
         android:id="@+id/button_suma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="336dp"
-        android:onClick="sumar"
-        android:text="Sumar"
+        android:layout_marginStart="160dp"
+        android:layout_marginBottom="276dp"
+        android:onClick="operar"
+        android:text="Utilizar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -49,52 +73,42 @@
         android:layout_width="107dp"
         android:layout_height="34dp"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:text="Ingrese un valor"
         app:layout_constraintBottom_toTopOf="@+id/number_1"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nav_host_fragment_activity_main"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textButtonClick_2"
         android:layout_width="115dp"
         android:layout_height="37dp"
-        android:layout_marginStart="44dp"
-        android:text="Ingrese un valor"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="143dp" />
-
-    <EditText
-        android:id="@+id/number_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textButtonClick_1" />
-
-    <EditText
-        android:id="@+id/number_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="184dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textButtonClick_2" />
+        android:text="Ingrese un valor"
+        app:layout_constraintBottom_toTopOf="@+id/number_2"
+        app:layout_constraintStart_toStartOf="@+id/number_1"
+        app:layout_constraintTop_toTopOf="@+id/nav_host_fragment_activity_main"
+        app:layout_constraintVertical_bias="0.915" />
 
     <TextView
         android:id="@+id/textResultado"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="24dp"
         android:text="Resultado"
         app:layout_constraintBottom_toTopOf="@+id/button_suma"
         app:layout_constraintEnd_toStartOf="@+id/nav_host_fragment_activity_main"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@+id/number_2"
+        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
